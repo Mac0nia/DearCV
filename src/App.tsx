@@ -1,4 +1,3 @@
-import React from 'react';
 import { ArrowRight, Upload, FileText, CheckCircle, AlertCircle, Zap, ChevronRight } from 'lucide-react';
 
 function App() {
@@ -196,23 +195,23 @@ function App() {
           <div className="grid md:grid-cols-3 gap-8">
             <div className="group relative">
               <div className="absolute inset-0 bg-gradient-to-b from-primary/5 to-primary/0 rounded-2xl -z-10 transition-opacity opacity-0 group-hover:opacity-100"></div>
-              <div className="bg-white p-8 rounded-2xl shadow-lg border-2 border-text/10 group-hover:border-primary/30 transition-colors">
+              <div className="bg-white p-8 rounded-2xl shadow-lg border-2 border-text/10 group-hover:border-primary/30 transition-colors h-full">
                 <h3 className="text-xl font-bold text-text mb-3">Free Starter</h3>
                 <p className="text-text/70">Get started with basic features at no cost.</p>
               </div>
             </div>
             <div className="group relative">
               <div className="absolute inset-0 bg-gradient-to-b from-primary/5 to-primary/0 rounded-2xl -z-10 transition-opacity opacity-0 group-hover:opacity-100"></div>
-              <div className="bg-white p-8 rounded-2xl shadow-lg border-2 border-text/10 group-hover:border-primary/30 transition-colors">
+              <div className="bg-white p-8 rounded-2xl shadow-lg border-2 border-text/10 group-hover:border-primary/30 transition-colors h-full">
                 <h3 className="text-xl font-bold text-text mb-3">Monthly Plan</h3>
                 <p className="text-text/70">Access premium features for just £4.99/month.</p>
               </div>
             </div>
             <div className="group relative">
               <div className="absolute inset-0 bg-gradient-to-b from-primary/5 to-primary/0 rounded-2xl -z-10 transition-opacity opacity-0 group-hover:opacity-100"></div>
-              <div className="bg-white p-8 rounded-2xl shadow-lg border-2 border-text/10 group-hover:border-primary/30 transition-colors">
+              <div className="bg-white p-8 rounded-2xl shadow-lg border-2 border-text/10 group-hover:border-primary/30 transition-colors h-full">
                 <h3 className="text-xl font-bold text-text mb-3">Yearly Plan</h3>
-                <p className="text-text/70">Save with an annual subscription at £49.99/year.</p>
+                <p className="text-text/70">Save more with a yearly subscription of £49.99.</p>
               </div>
             </div>
           </div>
