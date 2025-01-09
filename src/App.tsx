@@ -23,7 +23,6 @@ function App() {
         </div>
       </nav>
 
-      {/* Rest of the components remain the same */}
       {/* Hero Section */}
       <div className="pt-32 pb-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -124,6 +123,98 @@ function App() {
                 </div>
               </div>
             ))}
+          </div>
+        </div>
+      </div>
+
+      {/* Features Section */}
+      <div className="bg-background py-24">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-text mb-4">Features</h2>
+            <p className="text-text/70 text-lg max-w-2xl mx-auto">"Empower Your Resume with Cutting-Edge Tools"</p>
+          </div>
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="group relative">
+              <div className="absolute inset-0 bg-gradient-to-b from-primary/5 to-primary/0 rounded-2xl -z-10 transition-opacity opacity-0 group-hover:opacity-100"></div>
+              <div className="bg-white p-8 rounded-2xl shadow-lg border-2 border-text/10 group-hover:border-primary/30 transition-colors">
+                <h3 className="text-xl font-bold text-text mb-3">ATS Optimization</h3>
+                <p className="text-text/70">Ensure your resume passes through Applicant Tracking Systems with ease.</p>
+              </div>
+            </div>
+            <div className="group relative">
+              <div className="absolute inset-0 bg-gradient-to-b from-primary/5 to-primary/0 rounded-2xl -z-10 transition-opacity opacity-0 group-hover:opacity-100"></div>
+              <div className="bg-white p-8 rounded-2xl shadow-lg border-2 border-text/10 group-hover:border-primary/30 transition-colors">
+                <h3 className="text-xl font-bold text-text mb-3">Time Saving</h3>
+                <p className="text-text/70">Quickly tailor your resume to each job application without starting from scratch.</p>
+              </div>
+            </div>
+            <div className="group relative">
+              <div className="absolute inset-0 bg-gradient-to-b from-primary/5 to-primary/0 rounded-2xl -z-10 transition-opacity opacity-0 group-hover:opacity-100"></div>
+              <div className="bg-white p-8 rounded-2xl shadow-lg border-2 border-text/10 group-hover:border-primary/30 transition-colors">
+                <h3 className="text-xl font-bold text-text mb-3">Scorer</h3>
+                <p className="text-text/70">Get a detailed score and feedback on your resume's effectiveness.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Testimonial Section */}
+      <div className="bg-text py-24">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-white mb-4">Testimonials</h2>
+            <p className="text-white/70 text-lg max-w-2xl mx-auto">"Hear from Our Satisfied Users"</p>
+          </div>
+          <div className="grid md:grid-cols-2 gap-8">
+            <div className="group relative">
+              <div className="absolute inset-0 bg-gradient-to-b from-primary/5 to-primary/0 rounded-2xl -z-10 transition-opacity opacity-0 group-hover:opacity-100"></div>
+              <div className="bg-white/10 p-8 rounded-2xl shadow-lg border-2 border-white/20 group-hover:border-primary/30 transition-colors">
+                <p className="text-white/70">"DearCV transformed my job search! The tailored suggestions were spot on."</p>
+                <p className="text-white mt-4 font-bold">- Alex J.</p>
+              </div>
+            </div>
+            <div className="group relative">
+              <div className="absolute inset-0 bg-gradient-to-b from-primary/5 to-primary/0 rounded-2xl -z-10 transition-opacity opacity-0 group-hover:opacity-100"></div>
+              <div className="bg-white/10 p-8 rounded-2xl shadow-lg border-2 border-white/20 group-hover:border-primary/30 transition-colors">
+                <p className="text-white/70">"I landed my dream job thanks to DearCV's resume optimization features."</p>
+                <p className="text-white mt-4 font-bold">- Jamie L.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Pricing Section */}
+      <div className="bg-background py-24">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-text mb-4">Pricing</h2>
+            <p className="text-text/70 text-lg max-w-2xl mx-auto">"Choose the Plan That's Right for You"</p>
+          </div>
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="group relative">
+              <div className="absolute inset-0 bg-gradient-to-b from-primary/5 to-primary/0 rounded-2xl -z-10 transition-opacity opacity-0 group-hover:opacity-100"></div>
+              <div className="bg-white p-8 rounded-2xl shadow-lg border-2 border-text/10 group-hover:border-primary/30 transition-colors">
+                <h3 className="text-xl font-bold text-text mb-3">Free Starter</h3>
+                <p className="text-text/70">Get started with basic features at no cost.</p>
+              </div>
+            </div>
+            <div className="group relative">
+              <div className="absolute inset-0 bg-gradient-to-b from-primary/5 to-primary/0 rounded-2xl -z-10 transition-opacity opacity-0 group-hover:opacity-100"></div>
+              <div className="bg-white p-8 rounded-2xl shadow-lg border-2 border-text/10 group-hover:border-primary/30 transition-colors">
+                <h3 className="text-xl font-bold text-text mb-3">Monthly Plan</h3>
+                <p className="text-text/70">Access premium features for just £4.99/month.</p>
+              </div>
+            </div>
+            <div className="group relative">
+              <div className="absolute inset-0 bg-gradient-to-b from-primary/5 to-primary/0 rounded-2xl -z-10 transition-opacity opacity-0 group-hover:opacity-100"></div>
+              <div className="bg-white p-8 rounded-2xl shadow-lg border-2 border-text/10 group-hover:border-primary/30 transition-colors">
+                <h3 className="text-xl font-bold text-text mb-3">Yearly Plan</h3>
+                <p className="text-text/70">Save with an annual subscription at £49.99/year.</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
