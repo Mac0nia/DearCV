@@ -1,4 +1,5 @@
 import { ArrowRight, Upload, FileText, CheckCircle, AlertCircle, Zap, ChevronRight } from 'lucide-react';
+import AnimatedBackground from './components/AnimatedBackground';
 
 function App() {
   const scrollToSection = () => {
@@ -9,12 +10,13 @@ function App() {
   };
 
   return (
-    <div className="min-h-screen bg-text">
+    <div className="min-h-screen relative overflow-hidden">
+      <AnimatedBackground />
       {/* Navigation */}
-      <nav className="fixed w-full z-50 bg-text/95 backdrop-blur-sm border-b border-white/10">
+      <nav className="fixed w-full z-50 border-b border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <img src="/src/red.svg" alt="ResumeAI Logo" className="h-24 w-auto" />
+            <img src="/src/red.svg" alt="DearCV Logo" className="h-32 w-auto" />
           </div>
           <button className="bg-white/10 hover:bg-white/20 text-white px-6 py-2.5 rounded-lg transition-all">
             Get Started
@@ -52,7 +54,7 @@ function App() {
             <div className="w-full max-w-2xl mx-auto">
               <div className="relative">
                 <div className="absolute inset-0 bg-gradient-to-r from-primary/30 to-secondary/30 blur-3xl rounded-full transform -rotate-12"></div>
-                <div className="relative bg-white/10 backdrop-blur-sm p-8 rounded-2xl border border-white/20">
+                <div className="relative bg-white/5 backdrop-blur-sm p-8 rounded-2xl border border-white/20">
                   <div className="space-y-6">
                     <div className="flex items-center gap-4">
                       <div className="w-12 h-12 rounded-lg bg-primary/20 flex items-center justify-center">
@@ -81,13 +83,13 @@ function App() {
       </div>
 
       {/* Process Section */}
-      <div id="three-steps-section" className="bg-background py-24">
+      <div id="three-steps-section" className="py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-text mb-4">
+            <h2 className="text-4xl font-bold text-white mb-4">
               Three Steps to Landing Your Dream Job
             </h2>
-            <p className="text-text/70 text-lg max-w-2xl mx-auto">
+            <p className="text-white/70 text-lg max-w-2xl mx-auto">
               Our AI-powered platform simplifies the process of tailoring your resume for each application.
             </p>
           </div>
@@ -110,15 +112,12 @@ function App() {
               }
             ].map((step, i) => (
               <div key={i} className="group relative">
-                <div className="absolute inset-0 bg-gradient-to-b from-primary/5 to-primary/0 rounded-2xl -z-10 transition-opacity opacity-0 group-hover:opacity-100"></div>
-                <div className="bg-white p-8 rounded-2xl shadow-lg border-2 border-text/10 group-hover:border-primary/30 transition-colors">
-                  <div className="mb-6">
-                    <div className="bg-primary/10 w-16 h-16 rounded-xl flex items-center justify-center">
-                      <step.icon className="h-8 w-8 text-primary" />
-                    </div>
+                <div className="relative bg-white/5 backdrop-blur-sm rounded-xl p-6 ring-1 ring-white/10 hover:ring-white/20 transition-all">
+                  <div className="flex items-center justify-center w-12 h-12 bg-primary/10 rounded-lg mb-4">
+                    <step.icon className="h-6 w-6 text-primary" />
                   </div>
-                  <h3 className="text-xl font-bold text-text mb-3">{step.title}</h3>
-                  <p className="text-text/70">{step.desc}</p>
+                  <h3 className="text-xl font-bold text-white mb-2">{step.title}</h3>
+                  <p className="text-white/70">{step.desc}</p>
                 </div>
               </div>
             ))}
@@ -127,32 +126,38 @@ function App() {
       </div>
 
       {/* Features Section */}
-      <div className="bg-background py-24">
+      <div className="py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-text mb-4">Features</h2>
-            <p className="text-text/70 text-lg max-w-2xl mx-auto">"Empower Your Resume with Cutting-Edge Tools"</p>
+            <h2 className="text-4xl font-bold text-white mb-4">Features</h2>
+            <p className="text-white/70 text-lg max-w-2xl mx-auto">Empower Your Resume with Cutting-Edge Tools</p>
           </div>
           <div className="grid md:grid-cols-3 gap-8">
             <div className="group relative">
-              <div className="absolute inset-0 bg-gradient-to-b from-primary/5 to-primary/0 rounded-2xl -z-10 transition-opacity opacity-0 group-hover:opacity-100"></div>
-              <div className="bg-white p-8 rounded-2xl shadow-lg border-2 border-text/10 group-hover:border-primary/30 transition-colors">
-                <h3 className="text-xl font-bold text-text mb-3">ATS Optimization</h3>
-                <p className="text-text/70">Ensure your resume passes through Applicant Tracking Systems with ease.</p>
+              <div className="relative bg-white/5 backdrop-blur-sm rounded-xl p-6 ring-1 ring-white/10 hover:ring-white/20 transition-all">
+                <div className="flex items-center justify-center w-12 h-12 bg-primary/10 rounded-lg mb-4">
+                  <FileText className="h-6 w-6 text-primary" />
+                </div>
+                <h3 className="text-xl font-bold text-white mb-2">ATS Optimization</h3>
+                <p className="text-white/70">Ensure your resume passes through Applicant Tracking Systems with ease.</p>
               </div>
             </div>
             <div className="group relative">
-              <div className="absolute inset-0 bg-gradient-to-b from-primary/5 to-primary/0 rounded-2xl -z-10 transition-opacity opacity-0 group-hover:opacity-100"></div>
-              <div className="bg-white p-8 rounded-2xl shadow-lg border-2 border-text/10 group-hover:border-primary/30 transition-colors">
-                <h3 className="text-xl font-bold text-text mb-3">Time Saving</h3>
-                <p className="text-text/70">Quickly tailor your resume to each job application without starting from scratch.</p>
+              <div className="relative bg-white/5 backdrop-blur-sm rounded-xl p-6 ring-1 ring-white/10 hover:ring-white/20 transition-all">
+                <div className="flex items-center justify-center w-12 h-12 bg-primary/10 rounded-lg mb-4">
+                  <CheckCircle className="h-6 w-6 text-primary" />
+                </div>
+                <h3 className="text-xl font-bold text-white mb-2">Time Saving</h3>
+                <p className="text-white/70">Quickly tailor your resume to each job application without starting from scratch.</p>
               </div>
             </div>
             <div className="group relative">
-              <div className="absolute inset-0 bg-gradient-to-b from-primary/5 to-primary/0 rounded-2xl -z-10 transition-opacity opacity-0 group-hover:opacity-100"></div>
-              <div className="bg-white p-8 rounded-2xl shadow-lg border-2 border-text/10 group-hover:border-primary/30 transition-colors">
-                <h3 className="text-xl font-bold text-text mb-3">Scorer</h3>
-                <p className="text-text/70">Get a detailed score and feedback on your resume's effectiveness.</p>
+              <div className="relative bg-white/5 backdrop-blur-sm rounded-xl p-6 ring-1 ring-white/10 hover:ring-white/20 transition-all">
+                <div className="flex items-center justify-center w-12 h-12 bg-primary/10 rounded-lg mb-4">
+                  <AlertCircle className="h-6 w-6 text-primary" />
+                </div>
+                <h3 className="text-xl font-bold text-white mb-2">Scorer</h3>
+                <p className="text-white/70">Get a detailed score and feedback on your resume's effectiveness.</p>
               </div>
             </div>
           </div>
@@ -160,24 +165,22 @@ function App() {
       </div>
 
       {/* Testimonial Section */}
-      <div className="bg-text py-24">
+      <div className="py-24 bg-transparent">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">Testimonials</h2>
-            <p className="text-white/70 text-lg max-w-2xl mx-auto">"Hear from Our Satisfied Users"</p>
+            <p className="text-white/70 text-lg max-w-2xl mx-auto">Hear from Our Satisfied Users</p>
           </div>
           <div className="grid md:grid-cols-2 gap-8">
-            <div className="group relative">
-              <div className="absolute inset-0 bg-gradient-to-b from-primary/5 to-primary/0 rounded-2xl -z-10 transition-opacity opacity-0 group-hover:opacity-100"></div>
-              <div className="bg-white/10 p-8 rounded-2xl shadow-lg border-2 border-white/20 group-hover:border-primary/30 transition-colors">
-                <p className="text-white/70">"DearCV transformed my job search! The tailored suggestions were spot on."</p>
+            <div className="group relative h-full">
+              <div className="relative bg-white/5 backdrop-blur-sm rounded-xl p-8 ring-1 ring-white/10 hover:ring-white/20 transition-all h-full flex flex-col">
+                <p className="text-white/70 text-lg flex-grow">"DearCV transformed my job search! The tailored suggestions were spot on."</p>
                 <p className="text-white mt-4 font-bold">- Alex J.</p>
               </div>
             </div>
-            <div className="group relative">
-              <div className="absolute inset-0 bg-gradient-to-b from-primary/5 to-primary/0 rounded-2xl -z-10 transition-opacity opacity-0 group-hover:opacity-100"></div>
-              <div className="bg-white/10 p-8 rounded-2xl shadow-lg border-2 border-white/20 group-hover:border-primary/30 transition-colors">
-                <p className="text-white/70">"I landed my dream job thanks to DearCV's resume optimization features."</p>
+            <div className="group relative h-full">
+              <div className="relative bg-white/5 backdrop-blur-sm rounded-xl p-8 ring-1 ring-white/10 hover:ring-white/20 transition-all h-full flex flex-col">
+                <p className="text-white/70 text-lg flex-grow">"I landed my dream job thanks to DearCV's resume optimization features."</p>
                 <p className="text-white mt-4 font-bold">- Jamie L.</p>
               </div>
             </div>
@@ -186,32 +189,93 @@ function App() {
       </div>
 
       {/* Pricing Section */}
-      <div className="bg-background py-24">
+      <div className="py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-text mb-4">Pricing</h2>
-            <p className="text-text/70 text-lg max-w-2xl mx-auto">"Choose the Plan That's Right for You"</p>
+            <h2 className="text-4xl font-bold text-white mb-4">Pricing</h2>
+            <p className="text-white/70 text-lg max-w-2xl mx-auto">Choose the Plan That's Right for You</p>
           </div>
           <div className="grid md:grid-cols-3 gap-8">
-            <div className="group relative">
-              <div className="absolute inset-0 bg-gradient-to-b from-primary/5 to-primary/0 rounded-2xl -z-10 transition-opacity opacity-0 group-hover:opacity-100"></div>
-              <div className="bg-white p-8 rounded-2xl shadow-lg border-2 border-text/10 group-hover:border-primary/30 transition-colors h-full">
-                <h3 className="text-xl font-bold text-text mb-3">Free Starter</h3>
-                <p className="text-text/70">Get started with basic features at no cost.</p>
+            <div className="group relative h-full">
+              <div className="relative bg-white/5 backdrop-blur-sm rounded-xl p-8 ring-1 ring-white/10 hover:ring-white/20 transition-all h-full flex flex-col">
+                <h3 className="text-2xl font-bold text-white mb-4">Free Starter</h3>
+                <p className="text-4xl font-bold text-white mb-6">£0<span className="text-lg font-normal text-white/70">/mo</span></p>
+                <ul className="space-y-4 mb-8 flex-grow">
+                  <li className="flex items-center text-white/70">
+                    <CheckCircle className="h-5 w-5 text-primary mr-2" />
+                    Basic resume analysis
+                  </li>
+                  <li className="flex items-center text-white/70">
+                    <CheckCircle className="h-5 w-5 text-primary mr-2" />
+                    Limited job matching
+                  </li>
+                  <li className="flex items-center text-white/70">
+                    <CheckCircle className="h-5 w-5 text-primary mr-2" />
+                    Email support
+                  </li>
+                </ul>
+                <button className="w-full bg-white/10 hover:bg-white/20 text-white px-6 py-3 rounded-lg transition-all">
+                  Get Started
+                </button>
               </div>
             </div>
-            <div className="group relative">
-              <div className="absolute inset-0 bg-gradient-to-b from-primary/5 to-primary/0 rounded-2xl -z-10 transition-opacity opacity-0 group-hover:opacity-100"></div>
-              <div className="bg-white p-8 rounded-2xl shadow-lg border-2 border-text/10 group-hover:border-primary/30 transition-colors h-full">
-                <h3 className="text-xl font-bold text-text mb-3">Monthly Plan</h3>
-                <p className="text-text/70">Access premium features for just £4.99/month.</p>
+
+            <div className="group relative h-full">
+              <div className="relative bg-white/5 backdrop-blur-sm rounded-xl p-8 ring-1 ring-white/10 hover:ring-white/20 transition-all h-full flex flex-col">
+                <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                  <span className="bg-primary text-white text-sm font-medium px-3 py-1 rounded-full">Popular</span>
+                </div>
+                <h3 className="text-2xl font-bold text-white mb-4">Monthly Plan</h3>
+                <p className="text-4xl font-bold text-white mb-6">£4.99<span className="text-lg font-normal text-white/70">/mo</span></p>
+                <ul className="space-y-4 mb-8 flex-grow">
+                  <li className="flex items-center text-white/70">
+                    <CheckCircle className="h-5 w-5 text-primary mr-2" />
+                    Advanced AI analysis
+                  </li>
+                  <li className="flex items-center text-white/70">
+                    <CheckCircle className="h-5 w-5 text-primary mr-2" />
+                    Unlimited job matching
+                  </li>
+                  <li className="flex items-center text-white/70">
+                    <CheckCircle className="h-5 w-5 text-primary mr-2" />
+                    Priority support
+                  </li>
+                  <li className="flex items-center text-white/70">
+                    <CheckCircle className="h-5 w-5 text-primary mr-2" />
+                    Custom templates
+                  </li>
+                </ul>
+                <button className="w-full bg-primary hover:bg-primary-hover text-white px-6 py-3 rounded-lg transition-all">
+                  Start Pro Trial
+                </button>
               </div>
             </div>
-            <div className="group relative">
-              <div className="absolute inset-0 bg-gradient-to-b from-primary/5 to-primary/0 rounded-2xl -z-10 transition-opacity opacity-0 group-hover:opacity-100"></div>
-              <div className="bg-white p-8 rounded-2xl shadow-lg border-2 border-text/10 group-hover:border-primary/30 transition-colors h-full">
-                <h3 className="text-xl font-bold text-text mb-3">Yearly Plan</h3>
-                <p className="text-text/70">Save more with a yearly subscription of £49.99.</p>
+
+            <div className="group relative h-full">
+              <div className="relative bg-white/5 backdrop-blur-sm rounded-xl p-8 ring-1 ring-white/10 hover:ring-white/20 transition-all h-full flex flex-col">
+                <h3 className="text-2xl font-bold text-white mb-4">Yearly Plan</h3>
+                <p className="text-4xl font-bold text-white mb-6">£49.99<span className="text-lg font-normal text-white/70">/yr</span></p>
+                <ul className="space-y-4 mb-8 flex-grow">
+                  <li className="flex items-center text-white/70">
+                    <CheckCircle className="h-5 w-5 text-primary mr-2" />
+                    Custom AI training
+                  </li>
+                  <li className="flex items-center text-white/70">
+                    <CheckCircle className="h-5 w-5 text-primary mr-2" />
+                    API access
+                  </li>
+                  <li className="flex items-center text-white/70">
+                    <CheckCircle className="h-5 w-5 text-primary mr-2" />
+                    Dedicated support
+                  </li>
+                  <li className="flex items-center text-white/70">
+                    <CheckCircle className="h-5 w-5 text-primary mr-2" />
+                    Custom branding
+                  </li>
+                </ul>
+                <button className="w-full bg-white/10 hover:bg-white/20 text-white px-6 py-3 rounded-lg transition-all">
+                  Contact Sales
+                </button>
               </div>
             </div>
           </div>
@@ -239,7 +303,7 @@ function App() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-2">
-              <img src="/src/red.svg" alt="ResumeAI Logo" className="h-12 w-auto" />
+              <img src="/src/red.svg" alt="DearCV Logo" className="h-32 w-auto" />
             
             </div>
             <p className="text-white/40 text-sm">
