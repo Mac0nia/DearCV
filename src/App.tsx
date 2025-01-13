@@ -16,7 +16,7 @@ function App() {
       <nav className="fixed w-full z-50 border-b border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <img src="/src/red.svg" alt="DearCV Logo" className="h-32 w-auto" />
+            <img src="/src/red.svg" alt="DearCV Logo" className="h-32 w-auto mx-auto" />
           </div>
           <button className="bg-white/10 hover:bg-white/20 text-white px-6 py-2.5 rounded-lg transition-all">
             Get Started
@@ -29,6 +29,7 @@ function App() {
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col items-center gap-16">
             <div className="max-w-3xl text-center">
+              <img src="/src/red.svg" alt="DearCV Logo" className="mb-4 mx-auto" />
               <div className="inline-flex items-center gap-2 bg-primary/20 text-primary px-4 py-2 rounded-full mb-8">
                 <Zap className="h-4 w-4" />
                 <span className="text-sm font-medium">Powered by AI</span>
@@ -38,7 +39,7 @@ function App() {
                 <span className="block text-primary mt-2">Perfected</span>
               </h1>
               <p className="text-white/70 text-xl mb-8">
-                Let AI analyze and optimize your resume for each job application, increasing your chances of landing interviews.
+                Let AI analyse and optimize your resume for each job application, increasing your chances of landing interviews.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="bg-primary hover:bg-primary-hover text-white px-8 py-4 rounded-lg text-lg font-semibold transition-all inline-flex items-center justify-center gap-3">
@@ -198,16 +199,16 @@ function App() {
           <div className="grid md:grid-cols-3 gap-8">
             <div className="group relative h-full">
               <div className="relative bg-white/5 backdrop-blur-sm rounded-xl p-8 ring-1 ring-white/10 hover:ring-white/20 transition-all h-full flex flex-col">
-                <h3 className="text-2xl font-bold text-white mb-4">Free Starter</h3>
-                <p className="text-4xl font-bold text-white mb-6">£0<span className="text-lg font-normal text-white/70">/mo</span></p>
+                <h3 className="text-2xl font-bold text-white mb-4">Free</h3>
+                <p className="text-4xl font-bold text-white mb-6">£0</p>
                 <ul className="space-y-4 mb-8 flex-grow">
                   <li className="flex items-center text-white/70">
                     <CheckCircle className="h-5 w-5 text-primary mr-2" />
-                    Basic resume analysis
+                    One CV analysis
                   </li>
                   <li className="flex items-center text-white/70">
                     <CheckCircle className="h-5 w-5 text-primary mr-2" />
-                    Limited job matching
+                    Basic optimization tips
                   </li>
                   <li className="flex items-center text-white/70">
                     <CheckCircle className="h-5 w-5 text-primary mr-2" />
@@ -222,11 +223,8 @@ function App() {
 
             <div className="group relative h-full">
               <div className="relative bg-white/5 backdrop-blur-sm rounded-xl p-8 ring-1 ring-white/10 hover:ring-white/20 transition-all h-full flex flex-col">
-                <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                  <span className="bg-primary text-white text-sm font-medium px-3 py-1 rounded-full">Popular</span>
-                </div>
-                <h3 className="text-2xl font-bold text-white mb-4">Monthly Plan</h3>
-                <p className="text-4xl font-bold text-white mb-6">£4.99<span className="text-lg font-normal text-white/70">/mo</span></p>
+                <h3 className="text-2xl font-bold text-white mb-4">Pay as You Go</h3>
+                <p className="text-4xl font-bold text-white mb-6">£4.99<span className="text-lg font-normal text-white/70">/CV</span></p>
                 <ul className="space-y-4 mb-8 flex-grow">
                   <li className="flex items-center text-white/70">
                     <CheckCircle className="h-5 w-5 text-primary mr-2" />
@@ -234,7 +232,7 @@ function App() {
                   </li>
                   <li className="flex items-center text-white/70">
                     <CheckCircle className="h-5 w-5 text-primary mr-2" />
-                    Unlimited job matching
+                    Job-specific optimization
                   </li>
                   <li className="flex items-center text-white/70">
                     <CheckCircle className="h-5 w-5 text-primary mr-2" />
@@ -242,39 +240,42 @@ function App() {
                   </li>
                   <li className="flex items-center text-white/70">
                     <CheckCircle className="h-5 w-5 text-primary mr-2" />
-                    Custom templates
+                    Pay only when needed
                   </li>
                 </ul>
-                <button className="w-full bg-primary hover:bg-primary-hover text-white px-6 py-3 rounded-lg transition-all">
-                  Start Pro Trial
+                <button className="w-full bg-white/10 hover:bg-white/20 text-white px-6 py-3 rounded-lg transition-all">
+                  Start Now
                 </button>
               </div>
             </div>
 
             <div className="group relative h-full">
               <div className="relative bg-white/5 backdrop-blur-sm rounded-xl p-8 ring-1 ring-white/10 hover:ring-white/20 transition-all h-full flex flex-col">
-                <h3 className="text-2xl font-bold text-white mb-4">Yearly Plan</h3>
-                <p className="text-4xl font-bold text-white mb-6">£49.99<span className="text-lg font-normal text-white/70">/yr</span></p>
+                <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                  <span className="bg-primary text-white text-sm font-medium px-3 py-1 rounded-full">Most Popular</span>
+                </div>
+                <h3 className="text-2xl font-bold text-white mb-4">Monthly</h3>
+                <p className="text-4xl font-bold text-white mb-6">£19.99<span className="text-lg font-normal text-white/70">/mo</span></p>
                 <ul className="space-y-4 mb-8 flex-grow">
                   <li className="flex items-center text-white/70">
                     <CheckCircle className="h-5 w-5 text-primary mr-2" />
-                    Custom AI training
+                    Unlimited CV analysis
                   </li>
                   <li className="flex items-center text-white/70">
                     <CheckCircle className="h-5 w-5 text-primary mr-2" />
-                    API access
+                    All premium features
                   </li>
                   <li className="flex items-center text-white/70">
                     <CheckCircle className="h-5 w-5 text-primary mr-2" />
-                    Dedicated support
+                    24/7 priority support
                   </li>
                   <li className="flex items-center text-white/70">
                     <CheckCircle className="h-5 w-5 text-primary mr-2" />
-                    Custom branding
+                    Custom templates
                   </li>
                 </ul>
-                <button className="w-full bg-white/10 hover:bg-white/20 text-white px-6 py-3 rounded-lg transition-all">
-                  Contact Sales
+                <button className="w-full bg-primary hover:bg-primary-hover text-white px-6 py-3 rounded-lg transition-all">
+                  Get Unlimited Access
                 </button>
               </div>
             </div>
@@ -283,8 +284,8 @@ function App() {
       </div>
 
       {/* Disclaimer */}
-      <div className="bg-text">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <div className="py-12">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="bg-white/5 backdrop-blur-sm border border-white/10 p-6 rounded-2xl">
             <div className="flex items-start gap-4">
               <AlertCircle className="h-6 w-6 text-primary flex-shrink-0 mt-1" />
@@ -299,14 +300,68 @@ function App() {
       </div>
 
       {/* Footer */}
-      <footer className="bg-text border-t border-white/10">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-          <div className="flex items-center justify-between">
-            <div className="flex items-center gap-2">
-              <img src="/src/red.svg" alt="DearCV Logo" className="h-32 w-auto" />
-            
+      <footer className="py-12">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid md:grid-cols-4 gap-8">
+            <div>
+              <h3 className="text-lg font-semibold text-white mb-4">Product</h3>
+              <ul className="space-y-2">
+                <li>
+                  <a href="#" className="text-white/70 hover:text-white transition-colors">Features</a>
+                </li>
+                <li>
+                  <a href="#" className="text-white/70 hover:text-white transition-colors">Pricing</a>
+                </li>
+                <li>
+                  <a href="#" className="text-white/70 hover:text-white transition-colors">FAQ</a>
+                </li>
+              </ul>
             </div>
-            <p className="text-white/40 text-sm">
+            <div>
+              <h3 className="text-lg font-semibold text-white mb-4">Company</h3>
+              <ul className="space-y-2">
+                <li>
+                  <a href="#" className="text-white/70 hover:text-white transition-colors">About</a>
+                </li>
+                <li>
+                  <a href="#" className="text-white/70 hover:text-white transition-colors">Blog</a>
+                </li>
+                <li>
+                  <a href="#" className="text-white/70 hover:text-white transition-colors">Careers</a>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h3 className="text-lg font-semibold text-white mb-4">Support</h3>
+              <ul className="space-y-2">
+                <li>
+                  <a href="#" className="text-white/70 hover:text-white transition-colors">Help Center</a>
+                </li>
+                <li>
+                  <a href="#" className="text-white/70 hover:text-white transition-colors">Contact</a>
+                </li>
+                <li>
+                  <a href="#" className="text-white/70 hover:text-white transition-colors">Privacy</a>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h3 className="text-lg font-semibold text-white mb-4">Connect</h3>
+              <ul className="space-y-2">
+                <li>
+                  <a href="#" className="text-white/70 hover:text-white transition-colors">Twitter</a>
+                </li>
+                <li>
+                  <a href="#" className="text-white/70 hover:text-white transition-colors">LinkedIn</a>
+                </li>
+                <li>
+                  <a href="#" className="text-white/70 hover:text-white transition-colors">GitHub</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div className="mt-12 pt-8 border-t border-white/10">
+            <p className="text-center text-white/70">
               &copy; {new Date().getFullYear()} DearCV. All rights reserved.
             </p>
           </div>
