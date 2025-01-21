@@ -102,7 +102,7 @@ const AnimatedBackground = ({ className = '' }: AnimatedBackgroundProps) => {
           
           ctx.beginPath();
           ctx.arc(dot.x, dot.y, glowSize, 0, Math.PI * 2);
-          ctx.fillStyle = `rgba(255, 59, 48, ${intensity * 0.35})`;
+          ctx.fillStyle = `rgba(199, 50, 87, ${intensity * 0.35})`;
           ctx.fill();
         }
       });

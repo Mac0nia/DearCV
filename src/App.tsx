@@ -2,8 +2,8 @@ import { ArrowRight, Upload, FileText, CheckCircle, AlertCircle, Zap, ChevronRig
 import AnimatedBackground from './components/AnimatedBackground';
 
 function App() {
-  const scrollToSection = () => {
-    const section = document.getElementById('three-steps-section');
+  const scrollToSection = (sectionId: string) => {
+    const section = document.getElementById(sectionId);
     if (section) {
       section.scrollIntoView({ behavior: 'smooth' });
     }
@@ -18,6 +18,26 @@ function App() {
           <div className="flex items-center gap-3">
             <img src="/src/red.svg" alt="DearCV Logo" className="h-32 w-auto mx-auto" />
           </div>
+          <div className="hidden md:flex items-center gap-8">
+            <button 
+              onClick={() => scrollToSection('features')}
+              className="text-white hover:text-primary transition-colors"
+            >
+              Features
+            </button>
+            <button 
+              onClick={() => scrollToSection('how-it-works')}
+              className="text-white hover:text-primary transition-colors"
+            >
+              How it Works
+            </button>
+            <button 
+              onClick={() => scrollToSection('pricing')}
+              className="text-white hover:text-primary transition-colors"
+            >
+              Pricing
+            </button>
+          </div>
           <button className="bg-white/10 hover:bg-white/20 text-white px-6 py-2.5 rounded-lg transition-all">
             Get Started
           </button>
@@ -25,28 +45,28 @@ function App() {
       </nav>
 
       {/* Hero Section */}
-      <div className="pt-32 pb-20 px-4 sm:px-6 lg:px-8">
+      <div id="hero" className="pt-32 pb-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col items-center gap-16">
             <div className="max-w-3xl text-center">
               <img src="/src/red.svg" alt="DearCV Logo" className="mb-4 mx-auto" />
-              <div className="inline-flex items-center gap-2 bg-primary/20 text-primary px-4 py-2 rounded-full mb-8">
+              <div className="inline-flex items-center gap-2 bg-primary/20 text-primary px-4 py-2 rounded-full mb-8" style={{ color: '#C73257' }}>
                 <Zap className="h-4 w-4" />
                 <span className="text-sm font-medium">Powered by AI</span>
               </div>
               <h1 className="text-6xl font-bold text-white mb-6">
                 Your Resume,
-                <span className="block text-primary mt-2">Perfected</span>
+                <span className="block text-primary mt-2" style={{ color: '#C73257' }}>Perfected</span>
               </h1>
               <p className="text-white/70 text-xl mb-8">
                 Let AI analyse and optimize your resume for each job application, increasing your chances of landing interviews.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="bg-primary hover:bg-primary-hover text-white px-8 py-4 rounded-lg text-lg font-semibold transition-all inline-flex items-center justify-center gap-3">
+                <button className="bg-primary hover:bg-primary-hover text-white px-8 py-4 rounded-lg text-lg font-semibold transition-colors duration-200 inline-flex items-center justify-center gap-3" style={{ backgroundColor: '#C73257' }}>
                   <span>Start Now</span>
                   <ArrowRight className="h-5 w-5" />
                 </button>
-                <button onClick={scrollToSection} className="bg-white/10 hover:bg-white/20 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-all inline-flex items-center justify-center gap-3">
+                <button onClick={() => scrollToSection('how-it-works')} className="bg-white/10 hover:bg-white/20 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-all inline-flex items-center justify-center gap-3">
                   <span>See How It Works</span>
                   <ChevronRight className="h-5 w-5" />
                 </button>
@@ -84,7 +104,7 @@ function App() {
       </div>
 
       {/* Process Section */}
-      <div id="three-steps-section" className="py-24">
+      <div id="how-it-works" className="py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">
@@ -127,7 +147,7 @@ function App() {
       </div>
 
       {/* Features Section */}
-      <div className="py-24">
+      <div id="features" className="py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">Features</h2>
@@ -166,7 +186,7 @@ function App() {
       </div>
 
       {/* Testimonial Section */}
-      <div className="py-24 bg-transparent">
+      <div id="testimonials" className="py-24 bg-transparent">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">Testimonials</h2>
@@ -181,8 +201,8 @@ function App() {
             </div>
             <div className="group relative h-full">
               <div className="relative bg-white/5 backdrop-blur-sm rounded-xl p-8 ring-1 ring-white/10 hover:ring-white/20 transition-all h-full flex flex-col">
-                <p className="text-white/70 text-lg flex-grow">"I landed my dream job thanks to DearCV's resume optimization features."</p>
-                <p className="text-white mt-4 font-bold">- Jamie L.</p>
+                <p className="text-white/70 text-lg flex-grow">"I landed my dream job thanks to DearCV's resume optimization features. Thanks god I used it."</p>
+                <p className="text-white mt-4 font-bold">- Lorenzo C.</p>
               </div>
             </div>
           </div>
@@ -190,7 +210,7 @@ function App() {
       </div>
 
       {/* Pricing Section */}
-      <div className="py-24">
+      <div id="pricing" className="py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">Pricing</h2>
@@ -274,7 +294,7 @@ function App() {
                     Custom templates
                   </li>
                 </ul>
-                <button className="w-full bg-primary hover:bg-primary-hover text-white px-6 py-3 rounded-lg transition-all">
+                <button className="w-full bg-primary hover:bg-primary-hover text-white px-6 py-3 rounded-lg transition-colors duration-200" style={{ backgroundColor: '#C73257' }}>
                   Get Unlimited Access
                 </button>
               </div>
@@ -284,7 +304,7 @@ function App() {
       </div>
 
       {/* Disclaimer */}
-      <div className="py-12">
+      <div id="disclaimer" className="py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="bg-white/5 backdrop-blur-sm border border-white/10 p-6 rounded-2xl">
             <div className="flex items-start gap-4">
@@ -300,7 +320,7 @@ function App() {
       </div>
 
       {/* Footer */}
-      <footer className="py-12">
+      <footer id="footer" className="py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-4 gap-8">
             <div>
