@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-primary: #C73257;
+  --color-primary-hover: #B32D4E;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  background: transparent !important;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+#root {
+  min-height: 100vh;
+  background: transparent !important;
+}
+
+.bg-primary {
+  background-color: var(--color-primary) !important;
+}
+
+.text-primary {
+  color: var(--color-primary) !important;
+}
+
+.hover\:bg-primary-hover:hover {
+  background-color: var(--color-primary-hover) !important;
+}
