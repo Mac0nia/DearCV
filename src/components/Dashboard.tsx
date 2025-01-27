@@ -1,95 +1,75 @@
-import React from 'react';
+import React, { useState } from 'react';
+import AnimatedBackground from '../components/AnimatedBackground';
 import './Dashboard.css';
-import AnimatedBackground from './AnimatedBackground';
+import { FileText, CheckCircle, AlertCircle } from 'lucide-react';
+
+type Resume = { 
+  id: number; 
+  name: string; 
+  description: string; 
+  skills: string[]; 
+  experience: string[]; 
+  education: string[]; 
+};
 
 const Dashboard: React.FC = () => {
-    return (
-        <div className="dashboard-container">
-            <AnimatedBackground />
-            {/* Header and Navbar */}
-            <nav className="fixed w-full z-50 backdrop-blur-sm border-b border-white/10">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between p-4">
-                    <div className="flex items-center gap-3">
-                        <a href="/">
-                            <img src="/src/red.svg" alt="DearCV Logo" className="h-32 w-auto mx-auto" />
-                        </a>
-                    </div>
-                    <div className="hidden md:flex items-center gap-8">
-                        <button className="text-white hover:text-primary transition-colors">Home</button>
-                        <button className="text-white hover:text-primary transition-colors">Features</button>
-                        <button className="text-white hover:text-primary transition-colors">Pricing</button>
-                    </div>
-                </div>
-            </nav>
+  const [resumes, setResumes] = useState<Resume[]>([]);
 
-            {/* Main Dashboard Content */}
-            <div className="main-content">
-                <div className="content-wrapper">
-                    <div className="options">
-                        <button className="option-button">Create New Optimized Resume</button>
-                        <button className="option-button">View Optimized Resumes</button>
-                    </div>
-                    <div className="resume-optimization">
-                        <h2>Optimize Your Resume</h2>
-                        <div className="step">
-                            <h3>Upload Resume</h3>
-                            <p>Share your current resume in any format - PDF, DOCX, or TXT</p>
-                            <input type="file" accept=".pdf,.docx,.txt" />
-                        </div>
-                        <div className="step">
-                            <h3>Add Job Details</h3>
-                            <p>Paste the URL of your target job posting from LinkedIn</p>
-                            <input type="url" placeholder="Job posting URL" />
-                        </div>
-                        <button className="download-button">Download Optimized Resume</button>
-                    </div>
-                </div>
+  const handleCreateResume = () => {
+    console.log('Creating a new optimized resume');
+  };
+
+  const handleViewResume = (id: string) => {
+    console.log(`Viewing resume with ID: ${id}`);
+  };
+
+  return (
+    <div className="dashboard-container">
+      <AnimatedBackground />
+      <header className="dashboard-header text-center mb-16">
+        <h1 className="text-4xl font-bold text-white mb-4">Dashboard</h1>
+        <p className="text-white/70 text-lg max-w-2xl mx-auto">Optimize your resume with cutting-edge tools</p>
+      </header>
+      <main className="dashboard-main">
+        <div className="grid md:grid-cols-3 gap-8 justify-items-center"> 
+          <div className="group relative create-resume"> 
+            <div className="relative bg-white/5 backdrop-blur-sm rounded-xl p-4 ring-1 ring-white/10 hover:ring-white/20 transition-all h-full">
+              <div className="flex items-center justify-center w-12 h-12 bg-primary/10 rounded-lg mb-4">
+                <FileText className="h-6 w-6 text-primary" />
+              </div>
+              <h3 className="text-xl font-bold text-white mb-2">Create New Optimized Resume</h3>
+              <button onClick={handleCreateResume} className="bg-primary hover:bg-primary-hover text-white px-4 py-2 rounded-lg transition-colors duration-200">Create Resume</button>
             </div>
-
-            {/* Footer */}
-            <footer className="py-12">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="grid md:grid-cols-4 gap-8">
-                        <div>
-                            <h3 className="text-lg font-semibold text-white mb-4">Product</h3>
-                            <ul className="space-y-2">
-                                <li><a href="#" className="text-white/70 hover:text-white transition-colors">Features</a></li>
-                                <li><a href="#" className="text-white/70 hover:text-white transition-colors">Pricing</a></li>
-                                <li><a href="#" className="text-white/70 hover:text-white transition-colors">FAQ</a></li>
-                            </ul>
-                        </div>
-                        <div>
-                            <h3 className="text-lg font-semibold text-white mb-4">Company</h3>
-                            <ul className="space-y-2">
-                                <li><a href="#" className="text-white/70 hover:text-white transition-colors">About</a></li>
-                                <li><a href="#" className="text-white/70 hover:text-white transition-colors">Blog</a></li>
-                                <li><a href="#" className="text-white/70 hover:text-white transition-colors">Careers</a></li>
-                            </ul>
-                        </div>
-                        <div>
-                            <h3 className="text-lg font-semibold text-white mb-4">Support</h3>
-                            <ul className="space-y-2">
-                                <li><a href="#" className="text-white/70 hover:text-white transition-colors">Help Center</a></li>
-                                <li><a href="#" className="text-white/70 hover:text-white transition-colors">Contact</a></li>
-                                <li><a href="#" className="text-white/70 hover:text-white transition-colors">Privacy</a></li>
-                            </ul>
-                        </div>
-                        <div>
-                            <h3 className="text-lg font-semibold text-white mb-4">Connect</h3>
-                            <ul className="space-y-2">
-                                <li><a href="#" className="text-white/70 hover:text-white transition-colors">Twitter</a></li>
-                                <li><a href="#" className="text-white/70 hover:text-white transition-colors">LinkedIn</a></li>
-                                <li><a href="#" className="text-white/70 hover:text-white transition-colors">GitHub</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div className="mt-12 pt-8 border-t border-white/10">
-                        <p className="text-center text-white/70">&copy; {new Date().getFullYear()} DearCV. All rights reserved.</p>
-                    </div>
-                </div>
-            </footer>
+          </div>
+          <div className="group relative upload-job-description"> 
+            <div className="relative bg-white/5 backdrop-blur-sm rounded-xl p-4 ring-1 ring-white/10 hover:ring-white/20 transition-all h-full">
+              <h3 className="text-xl font-bold text-white mb-2">Upload Job Description</h3>
+              <input type="url" placeholder="Enter Job Description URL" className="upload-url text-white p-2 rounded-lg mb-2 w-full" />
+              <button className="bg-primary hover:bg-primary-hover text-white px-4 py-2 rounded-lg transition-colors duration-200">Upload</button>
+            </div>
+          </div>
+          <div className="group relative view-resumes"> 
+            <div className="relative bg-white/5 backdrop-blur-sm rounded-xl p-4 ring-1 ring-white/10 hover:ring-white/20 transition-all h-full">
+              <div className="flex items-center justify-center w-12 h-12 bg-primary/10 rounded-lg mb-4">
+                <CheckCircle className="h-6 w-6 text-primary" />
+              </div>
+              <h3 className="text-xl font-bold text-white mb-2">View Optimized Resumes</h3>
+              <ul className="text-white/70">
+                {resumes.map((resume, index) => (
+                  <li key={index} className="mb-2">
+                    <button onClick={() => handleViewResume(resume.id.toString())} className="bg-primary hover:bg-primary-hover text-white px-4 py-2 rounded-lg transition-colors duration-200">View Resume {index + 1}</button>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
         </div>
-    );
+      </main>
+      <footer className="dashboard-footer">
+        {/* Additional tools or links */}
+      </footer>
+    </div>
+  );
 };
 
 export default Dashboard;

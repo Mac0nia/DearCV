@@ -43,7 +43,7 @@ function App() {
                     Pricing
                   </button>
                 </div>
-                <button className="bg-white/10 hover:bg-white/20 text-white px-6 py-2.5 rounded-lg transition-all" onClick={() => window.open('/dashboard', '_blank')}>
+                <button className="bg-white/10 hover:bg-white/20 text-white px-6 py-2.5 rounded-lg transition-all" onClick={() => scrollToSection('dashboard')}>
                   Get Started
                 </button>
               </div>
@@ -67,7 +67,7 @@ function App() {
                       Let AI analyse and optimize your resume for each job application, increasing your chances of landing interviews.
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                      <button className="bg-primary hover:bg-primary-hover text-white px-8 py-4 rounded-lg text-lg font-semibold transition-colors duration-200 inline-flex items-center justify-center gap-3" style={{ backgroundColor: '#C73257' }} onClick={() => window.open('/dashboard', '_blank')}>
+                      <button className="bg-primary hover:bg-primary-hover text-white px-8 py-4 rounded-lg text-lg font-semibold transition-colors duration-200 inline-flex items-center justify-center gap-3" style={{ backgroundColor: '#C73257' }} onClick={() => scrollToSection('dashboard')}>
                         <span>Start Now</span>
                         <ArrowRight className="h-5 w-5" />
                       </button>
@@ -182,12 +182,17 @@ function App() {
                       <div className="flex items-center justify-center w-12 h-12 bg-primary/10 rounded-lg mb-4">
                         <AlertCircle className="h-6 w-6 text-primary" />
                       </div>
-                      <h3 className="text-xl font-bold text-white mb-2">Scorer</h3>
-                      <p className="text-white/70">Get a detailed score and feedback on your resume's effectiveness.</p>
+                      <h3 className="text-xl font-bold text-white mb-2">Feedback</h3>
+                      <p className="text-white/70">Receive instant feedback and suggestions for improvement.</p>
                     </div>
                   </div>
                 </div>
               </div>
+            </div>
+
+            {/* Dashboard Section */}
+            <div id="dashboard">
+              <Dashboard />
             </div>
 
             {/* Testimonial Section */}
@@ -240,7 +245,7 @@ function App() {
                           Email support
                         </li>
                       </ul>
-                      <button className="w-full bg-white/10 hover:bg-white/20 text-white px-6 py-3 rounded-lg transition-all" onClick={() => window.open('/dashboard', '_blank')}>
+                      <button className="w-full bg-white/10 hover:bg-white/20 text-white px-6 py-3 rounded-lg transition-all" onClick={() => scrollToSection('dashboard')}>
                         Get Started
                       </button>
                     </div>
@@ -268,7 +273,7 @@ function App() {
                           Pay only when needed
                         </li>
                       </ul>
-                      <button className="w-full bg-white/10 hover:bg-white/20 text-white px-6 py-3 rounded-lg transition-all" onClick={() => window.open('/dashboard', '_blank')}>
+                      <button className="w-full bg-white/10 hover:bg-white/20 text-white px-6 py-3 rounded-lg transition-all" onClick={() => scrollToSection('dashboard')}>
                         Start Now
                       </button>
                     </div>
@@ -299,7 +304,7 @@ function App() {
                           Custom templates
                         </li>
                       </ul>
-                      <button className="w-full bg-primary hover:bg-primary-hover text-white px-6 py-3 rounded-lg transition-colors duration-200" style={{ backgroundColor: '#C73257' }} onClick={() => window.open('/dashboard', '_blank')}>
+                      <button className="w-full bg-primary hover:bg-primary-hover text-white px-6 py-3 rounded-lg transition-colors duration-200" style={{ backgroundColor: '#C73257' }} onClick={() => scrollToSection('dashboard')}>
                         Get Unlimited Access
                       </button>
                     </div>
@@ -394,7 +399,6 @@ function App() {
             </footer>
           </div>
         } />
-        <Route path="/dashboard" element={<Dashboard />} />
       </Routes>
     </Router>
   );
