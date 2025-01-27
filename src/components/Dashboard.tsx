@@ -35,7 +35,7 @@ const Dashboard: React.FC = () => {
           <div className="group relative create-resume"> 
             <div className="relative bg-white/5 backdrop-blur-sm rounded-xl p-4 ring-1 ring-white/10 hover:ring-white/20 transition-all h-full">
               <div className="flex items-center justify-center w-12 h-12 bg-primary/10 rounded-lg mb-4">
-                <FileText className="h-6 w-6 text-primary" />
+                <FileText className="h-6 w-6 text-primary" /S
               </div>
               <h3 className="text-xl font-bold text-white mb-2">Create New Optimized Resume</h3>
               <button onClick={handleCreateResume} className="bg-primary hover:bg-primary-hover text-white px-4 py-2 rounded-lg transition-colors duration-200">Create Resume</button>
@@ -53,7 +53,7 @@ const Dashboard: React.FC = () => {
               <div className="flex items-center justify-center w-12 h-12 bg-primary/10 rounded-lg mb-4">
                 <CheckCircle className="h-6 w-6 text-primary" />
               </div>
-              <h3 className="text-xl font-bold text-white mb-2">View Optimized Resumes</h3>
+              <h3 className="text-xl font-bold text-white mb-2">View Optimised Resume</h3>
               <ul className="text-white/70">
                 {resumes.map((resume, index) => (
                   <li key={index} className="mb-2">
