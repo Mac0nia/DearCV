@@ -1,4 +1,4 @@
-import { ArrowRight, Upload, FileText, CheckCircle, AlertCircle, Zap, ChevronRight } from 'lucide-react';
+import { ArrowRight, Upload, FileText, CheckCircle, AlertCircle, Zap, ChevronRight, Clock, TextSearch } from 'lucide-react';
 import AnimatedBackground from './components/AnimatedBackground';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Dashboard from './components/Dashboard';
@@ -162,7 +162,7 @@ function App() {
                   <div className="group relative">
                     <div className="relative bg-white/5 backdrop-blur-sm rounded-xl p-6 ring-1 ring-white/10 hover:ring-white/20 transition-all">
                       <div className="flex items-center justify-center w-12 h-12 bg-primary/10 rounded-lg mb-4">
-                        <FileText className="h-6 w-6 text-primary" />
+                        <TextSearch className="h-6 w-6 text-primary" />
                       </div>
                       <h3 className="text-xl font-bold text-white mb-2">ATS Optimization</h3>
                       <p className="text-white/70">Ensure your resume passes through Applicant Tracking Systems with ease.</p>
@@ -171,7 +171,7 @@ function App() {
                   <div className="group relative">
                     <div className="relative bg-white/5 backdrop-blur-sm rounded-xl p-6 ring-1 ring-white/10 hover:ring-white/20 transition-all">
                       <div className="flex items-center justify-center w-12 h-12 bg-primary/10 rounded-lg mb-4">
-                        <CheckCircle className="h-6 w-6 text-primary" />
+                        <Clock className="h-6 w-6 text-primary" />
                       </div>
                       <h3 className="text-xl font-bold text-white mb-2">Time Saving</h3>
                       <p className="text-white/70">Quickly tailor your resume to each job application without starting from scratch.</p>
