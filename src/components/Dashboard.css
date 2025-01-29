@@ -33,6 +33,9 @@
 background-color: #7b79793d;
 }
 
+.center-text {
+  text-align: center;
+}
 
 /* Footer */
 .dashboard-footer {

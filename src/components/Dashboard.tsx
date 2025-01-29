@@ -47,7 +47,7 @@ const Dashboard: React.FC = () => {
                 <Briefcase className="h-6 w-6 text-primary"/>
               </div>
               <h3 className="text-xl font-bold text-white mb-2">Upload Job</h3>
-              <input type="url" placeholder="Enter Job URL" className="upload-url text-white px-4 py-2 rounded-lg mb-2 w-full" />
+              <input type="url" placeholder="Enter Job URL" className="upload-url text-white px-4 py-2 rounded-lg mb-2 w-full center-text" />
             </div>
           </div>
           <div className="group relative view-resumes"> 
